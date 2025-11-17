@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KANGA FRENZY — Animated Meme Landing Page</title>
+
+<style>
+  /* GLOBAL */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #ffe3c2, #fff7ed);
+    color: #222;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2 {
+    letter-spacing: 2px;
+  }
+
+  /* HERO SECTION */
+  header {
+    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9d42, #ffca83, #ffa245);
+    background-size: 300% 300%;
+    animation: gradientShift 12s infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  h1 {
+    font-size: 3.3rem;
+    margin-bottom: 10px;
+    animation: bounceIn 1.3s ease-out;
+  }
+
+  @keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.15); opacity: 1; }
+    70% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeUp 1.2s forwards 0.7s;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Floating kangaroo */
+  .kangaroo {
+    font-size: 4.5rem;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    animation: floatKanga 4s ease-in-out infinite;
+  }
+
+  @keyframes floatKanga {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+  }
+
+  /* BUTTON */
+  .cta-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #ff7a00;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 14px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    animation: fadeInScale 1.2s forwards 1.2s;
+    opacity: 0;
+  }
+
+  .cta-btn:hover {
+    transform: scale(1.1) rotate(1deg);
+    background: #d46900;
+  }
+
+  @keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlideIn 1s forwards;
+  }
+
+  .card:nth-child(1) { animation-delay: 0.2s; }
+  .card:nth-child(2) { animation-delay: 0.4s; }
+  .card:nth-child(3) { animation-delay: 0.6s; }
+
+  @keyframes fadeSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 30px 0;
+    text-align: center;
+    background: #ffc78c;
+  }
+
+  /* Socials */
+  .socials a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #d46b00;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: 0.25s;
+  }
+
+  .socials a:hover {
+    color: #ff7a00;
+    transform: scale(1.1);
+  }
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+  <span class="kangaroo">🦘</span>
+  <h1>KANGA FRENZY</h1>
+  <p class="subtitle">The wildest kangaroo on Solana — powered by unstoppable meme energy.</p>
+  <a href="#" class="cta-btn">Launch on Pump.fun</a>
+</header>
+
+<!-- STORY -->
+<section id="story">
+  <h2>📖 The Story</h2>
+  <div class="card">
+    <p>
+      Born in the Australian outback, a baby kangaroo hopped into a crypto miner’s shed and absorbed raw blockchain fumes.
+      Now he’s turbocharged, radioactive, and unstoppable — leaping across the Solana chain with pure chaos.
+    </p>
+  </div>
+</section>
+
+<!-- TOKENOMICS -->
+<section id="tokenomics">
+  <h2>📊 Tokenomics</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Total Supply:</strong> 1,000,000,000 KANGA</li>
+      <li><strong>Tax:</strong> 0 / 0</li>
+      <li><strong>Launch:</strong> 100% on Pump.fun bonding curve</li>
+      <li><strong>Ownership:</strong> Fully community-driven</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <h2>🛣️ Roadmap</h2>
+  <div class="card">
+    <h3>PHASE 1 — The Escape</h3>
+    <ul><li>Launch on Pump.fun</li><li>Meme flood</li><li>Community activation</li></ul>
+    <h3>PHASE 2 — Frenzy Mode</h3>
+    <ul><li>Contests</li><li>Hop Counter bot</li><li>Collabs</li></ul>
+    <h3>PHASE 3 — Ultra Hop</h3>
+    <ul><li>Animated mini-film</li><li>GIF packs</li><li>Community upgrades</li></ul>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <h2>🌐 Join the Frenzy</h2>
+  <div class="card socials">
+    <a href="#" target="_blank">Twitter</a>
+    <a href="#" target="_blank">Telegram</a>
+    <a href="#" target="_blank">Pump.fun</a>
+  </div>
+</section>
+
+<footer>
+  🦘 KANGA FRENZY — Just hops. No utility.
+</footer>
+
+</body>
+</html>
